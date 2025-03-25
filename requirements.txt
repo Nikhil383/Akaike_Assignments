@@ -1,0 +1,8 @@
+gradio
+requests
+textblob
+gtts
+deep-translator
+sentence-transformers
+yake
+python-dotenv
