@@ -16,33 +16,6 @@ To Develop a web-based application that extracts key details from multiple news 
 
 ## Workflow
 
-┌──────────────┐      ┌──────────────┐      ┌──────────────┐
-│  User Input  │ ──▶ │ Fetch News   │ ──▶ │  Summarize   │
-└──────────────┘      └──────────────┘      └──────────────┘
-        │                     │                     │
-        ▼                     ▼                     ▼
-┌───────────────────┐  ┌──────────────────┐  ┌──────────────────┐
-│ Sentiment Analysis│  │ Topic Extraction │  │ Compare Articles │
-└───────────────────┘  └──────────────────┘  └──────────────────┘
-        │                     │                     │
-        ▼                     ▼                     ▼
-┌──────────────┐      ┌──────────────┐      ┌──────────────┐
-│ Sentiment    │ ──▶ │ Topic Overlap │ ──▶ │ Coverage Diff│
-│ Distribution │      │  Extraction  │      │  Generation  │
-└──────────────┘      └──────────────┘      └──────────────┘
-        │
-        ▼
-┌───────────────────┐
-│ Hindi TTS Output  │
-└───────────────────┘
-        │
-        ▼
-┌───────────────────┐
-│ Display Results   │
-└───────────────────┘
-
-
-
 1️⃣ User Input: The user enters a company name in the Gradio interface.
 2️⃣ Fetch News: The system calls NewsAPI to fetch the latest 10 articles related to the company.
 3️⃣ Summarization: Extracts a summary of each article if necessary.
