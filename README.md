@@ -78,7 +78,7 @@ python app.py
 
 ## Deployment
 
-The deploymenton has been done hugging face spaces(link provided below): https://huggingface.co/spaces/Nikhillmahesh701/Akaike_Assignments
+The deploymenton has been done hugging face spaces(link provided below): [Hugging Face] https://huggingface.co/spaces/Nikhillmahesh701/Akaike_Assignments
 
 ## Screenshot
 ![image](https://github.com/user-attachments/assets/15406c5f-3fd3-416a-9bbe-5f0fcf4ee7d7)
@@ -87,5 +87,5 @@ The deploymenton has been done hugging face spaces(link provided below): https:/
 
 ## Credits
 
-developed by Nikhil Mahesh | Github: Nikhil383
+developed by Nikhil Mahesh | Github:[Github] Nikhil383
 contact: nikhilmahesh89@Gmail.com
