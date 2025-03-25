@@ -8,6 +8,8 @@ Develop a web-based application that extracts key details from multiple news art
 
 ## Workflow
 
+
+
 ## Models Used
 
 Component: Model/Library Used
@@ -35,13 +37,17 @@ NewsAPI: To fetch latest news aritcles related to a given company
 
 ### Assumptions
 
+NewsAPI returns at least 10 articles per query (Fewer articles may affect topic extraction).
+YAKE extracts meaningful topics from summaries (Short summaries may limit topic diversity).
+Sentiment Analysis is based on TextBlob, which may not always be 100% accurate.
 
 ### Limitations
 
 ❌ Relies on NewsAPI, which has a request limit per day (Free Tier: 100 requests/day).
-❌ Sentiment Analysis does not consider sarcasm or complex linguistic context.
-❌ Hindi TTS uses Google’s gTTS, which may have minor pronunciation issues.
 
+❌ Sentiment Analysis does not consider sarcasm or complex linguistic context.
+
+❌ Hindi TTS uses Google’s gTTS, which may have minor pronunciation issues.
 
 ## Possible Improveents
 
