@@ -6,5 +6,78 @@ Develop a web-based application that extracts key details from multiple news art
 
 ## Folder Structure
 
-## 1.Clone the Repository
+## Workflow
 
+## Models Used
+
+Component: Model/Library Used
+News Fetching: NewsAPI
+Sentiment Analysis: TextBlob
+Topic Extraction: YAKE
+Article Comparison: SBERT (Sentence Transformers)
+Text-to-Speech (Hindi): gTTS (Google Text-to-Speech)
+
+## API Used
+
+NewsAPI: To fetch latest news aritcles related to a given company
+
+## Features
+
+✅ Fetch & Summarize News Articles
+✅ Perform Sentiment Analysis (Positive, Negative, Neutral)
+✅ Extract Key Topics from News
+✅ Compare Articles & Identify Differences
+✅ Identify Common & Unique Topics across Articles
+✅ Generate Hindi TTS Audio Output
+✅ User-Friendly Gradio Interface for Interaction
+
+## Assumptions and Limitations
+
+### Assumptions
+
+
+### Limitations
+
+❌ Relies on NewsAPI, which has a request limit per day (Free Tier: 100 requests/day).
+❌ Sentiment Analysis does not consider sarcasm or complex linguistic context.
+❌ Hindi TTS uses Google’s gTTS, which may have minor pronunciation issues.
+
+
+## Possible Improveents
+
+🔹 Improve Sentiment Accuracy (Use fine-tuned transformer models like BERT).
+🔹 Enhance Topic Extraction (Combine YAKE with LDA for better results).
+🔹 Support Multiple Languages (Allow users to choose output language for TTS).
+🔹 Include More Data Sources (Extend beyond NewsAPI using web scraping).
+🔹 Deploy on Hugging Face Spaces & GitHub Actions for Continuous Deployment.
+
+## Setup & Installation
+
+1. Clone the Repository
+
+git clone https://github.com/yourusername/news_summary_project.git
+cd news_summary_project
+
+2. Install the Dependancies
+
+pip install -r requirements.txt
+
+3. Setup Environment Variables
+
+NEWS_API_KEY=your_newsapi_key
+
+4. Run the Application
+
+python app.py
+
+## Deployment
+
+it has been deployed on hugging face spaces(link provided below):
+
+## Screenshot
+
+
+## Credits
+
+developed by Nikhil Mahesh | Github: 
+contact: nikhilmahesh89@Gmail.com
