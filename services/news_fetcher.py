@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()  # Load API keys from .env file
-NEWS_API_KEY = "0920fb558a844ebeaf63bc1b51435653" #os.getenv("NEWS_API_KEY")
+NEWS_API_KEY = os.getenv("NEWS_API_KEY")
 
 def fetch_news(company):
     """Fetch top 10 news articles related to the company using NewsAPI."""
