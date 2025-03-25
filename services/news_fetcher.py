@@ -1,23 +1,25 @@
-import os
 import requests
+import os
+from dotenv import load_dotenv
 
-NEWSAPI_KEY =os.getenv("NEWSAPI_KEY")  #Fetching from environment variables
+load_dotenv()  # Load API keys from .env file
+NEWS_API_KEY = "0920fb558a844ebeaf63bc1b51435653" #os.getenv("NEWS_API_KEY")
 
 def fetch_news(company):
-    """Fetches news articles from user input using NewsAPI."""
-    url = f"https://newsapi.org/v2/everything?q={company}&apiKey={NEWSAPI_KEY}"
+    """Fetch top 10 news articles related to the company using NewsAPI."""
+    url = f"https://newsapi.org/v2/everything?q={company}&language=en&pageSize=10&apiKey={NEWS_API_KEY}"
     response = requests.get(url)
-    
+
     if response.status_code != 200:
-        print("Failed to fetch news.")
+        print("Error fetching news:", response.text)
         return []
 
     data = response.json()
     articles = []
 
-    for item in data.get("articles", [])[:10]:  # Limit to 10 articles
+    for item in data.get("articles", [])[:10]:
         articles.append({
-            "Title": item["title"],
+            "Title": item.get("title", "No Title"),
             "Summary": item.get("description", "No summary available")
         })
 

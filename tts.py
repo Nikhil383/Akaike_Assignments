@@ -1,13 +1,14 @@
 from gtts import gTTS
 from deep_translator import GoogleTranslator
+import os
 
-def generate_tts(text, output_path="static/output.mp3"):
+def generate_tts(text, lang="hi"):
     """Translate text to Hindi and generate TTS audio."""
-    try:
-        translated_text = GoogleTranslator(source="auto", target="hi").translate(text)
-        tts = gTTS(text=translated_text, lang="hi")
-        tts.save(output_path)
-        return output_path
-    except Exception as e:
-        print("Error generating TTS:", e)
-        return None
+    translator = GoogleTranslator(source="auto", target="hi")  # Translate to Hindi
+    translated_text = translator.translate(text)
+
+    output_path = "static/output.mp3"
+    tts = gTTS(translated_text, lang=lang)
+    tts.save(output_path)
+
+    return output_path  # Return file path for playback

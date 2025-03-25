@@ -2,21 +2,19 @@ import gradio as gr
 from utils import process_articles
 
 def analyze_news(company):
-    """Fetch and analyze news about a company."""
     structured_data = process_articles(company)
-    return structured_data, structured_data["Audio"]  # To Return JSON + Audio File
+    return structured_data, structured_data["Audio"]  # JSON output + Hindi TTS
 
-# To Define Gradio Interface with JSON + Audio Output
-interface = gr.Interface(
+iface = gr.Interface(
     fn=analyze_news,
     inputs=gr.Textbox(label="Enter Company Name"),
     outputs=[
-        gr.JSON(label="News Sentiment Analysis Output"),
-        gr.Audio(label="Hindi Audio Summary")
+        gr.JSON(label="News Analysis"),
+        gr.Audio(label="Hindi Audio Output", type="filepath"),  # Play audio
     ],
-    title="News Sentiment Analysis",
-    description="Analyze recent news articles for sentiment, topic extraction, and generate Hindi TTS output."
+    title="News Sentiment & Analysis",
+    description="Enter a company name to analyze recent news articles, sentiment distribution, topic overlap, and comparative analysis.",
 )
 
 if __name__ == "__main__":
-    interface.launch(share=True)
+    iface.launch()
