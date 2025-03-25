@@ -6,9 +6,58 @@ To Develop a web-based application that extracts key details from multiple news 
 
 ## Folder Structure
 
+1. app.py-Main Gradio application that processes user input, fetches news, and displays results.
+2. requirements.txt-Lists Python dependencies needed to run the project.
+3. README.md-Documentation with project details, setup instructions, and API usage.
+4. services/news_fetcher.py- Fetches news articles from NewsAPI.
+5. utils.py- Handles sentiment analysis, topic extraction, and comparison of news articles.
+6. tts.py- Converts sentiment analysis results into Hindi TTS audio.
+7. static/output.mp3- Stores generated Hindi speech audio for playback.
+
 ## Workflow
 
+┌──────────────┐      ┌──────────────┐      ┌──────────────┐
+│  User Input  │ ──▶ │ Fetch News   │ ──▶ │  Summarize   │
+└──────────────┘      └──────────────┘      └──────────────┘
+        │                     │                     │
+        ▼                     ▼                     ▼
+┌───────────────────┐  ┌──────────────────┐  ┌──────────────────┐
+│ Sentiment Analysis│  │ Topic Extraction │  │ Compare Articles │
+└───────────────────┘  └──────────────────┘  └──────────────────┘
+        │                     │                     │
+        ▼                     ▼                     ▼
+┌──────────────┐      ┌──────────────┐      ┌──────────────┐
+│ Sentiment    │ ──▶ │ Topic Overlap │ ──▶ │ Coverage Diff│
+│ Distribution │      │  Extraction  │      │  Generation  │
+└──────────────┘      └──────────────┘      └──────────────┘
+        │
+        ▼
+┌───────────────────┐
+│ Hindi TTS Output  │
+└───────────────────┘
+        │
+        ▼
+┌───────────────────┐
+│ Display Results   │
+└───────────────────┘
 
+
+
+1️⃣ User Input: The user enters a company name in the Gradio interface.
+2️⃣ Fetch News: The system calls NewsAPI to fetch the latest 10 articles related to the company.
+3️⃣ Summarization: Extracts a summary of each article if necessary.
+4️⃣ Sentiment Analysis: Uses TextBlob to analyze the sentiment (Positive, Negative, or Neutral).
+5️⃣ Topic Extraction: Uses YAKE (Keyword Extraction) to identify the main topics in each article.
+6️⃣ Comparative Analysis:
+
+Sentiment Distribution: Counts how many articles are Positive, Negative, and Neutral.
+
+Coverage Differences: Compares pairs of articles (1-2, 3-4, etc.) for differences in reporting.
+
+Topic Overlap: Identifies common topics and unique topics per article.
+7️⃣ Final Sentiment Analysis: Determines overall sentiment based on article distribution.
+8️⃣ Hindi TTS Generation: Converts the final sentiment text into Hindi speech for playback.
+9️⃣ Display Results: The structured JSON output, topics, coverage differences, and audio are displayed in the Gradio UI.
 
 ## Models Used
 
