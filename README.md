@@ -72,12 +72,14 @@ python app.py
 
 ## Deployment
 
-it has been deployed on hugging face spaces(link provided below):
+it has been deployed on hugging face spaces(link provided below): https://huggingface.co/spaces/Nikhillmahesh701/Akaike_Assignments
 
 ## Screenshot
+![image](https://github.com/user-attachments/assets/15406c5f-3fd3-416a-9bbe-5f0fcf4ee7d7)
 
+![image](https://github.com/user-attachments/assets/d5bc2a9b-736f-47db-a9e6-7d8abc8c7e7e)
 
 ## Credits
 
-developed by Nikhil Mahesh | Github: 
+developed by Nikhil Mahesh | Github: Nikhil383
 contact: nikhilmahesh89@Gmail.com
