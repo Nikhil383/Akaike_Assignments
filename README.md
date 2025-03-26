@@ -33,8 +33,11 @@ Sentiment Distribution: Counts how many articles are Positive, Negative, and Neu
 Coverage Differences: Compares pairs of articles (1-2, 3-4, etc.) for differences in reporting.
 
 Topic Overlap: Identifies common topics and unique topics per article.
+
 7️⃣ Final Sentiment Analysis: Determines overall sentiment based on article distribution.
+
 8️⃣ Hindi TTS Generation: Converts the final sentiment text into Hindi speech for playback.
+
 9️⃣ Display Results: The structured JSON output, topics, coverage differences, and audio are displayed in the Gradio UI.
 
 ## Models Used
