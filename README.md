@@ -56,11 +56,17 @@ NewsAPI: To fetch latest news aritcles related to a given company
 ## Features
 
 ✅ Fetch & Summarize News Articles
+
 ✅ Perform Sentiment Analysis (Positive, Negative, Neutral)
+
 ✅ Extract Key Topics from News
+
 ✅ Compare Articles & Identify Differences
+
 ✅ Identify Common & Unique Topics across Articles
+
 ✅ Generate Hindi TTS Audio Output
+
 ✅ User-Friendly Gradio Interface for Interaction
 
 ## Assumptions and Limitations
