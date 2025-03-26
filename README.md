@@ -88,9 +88,13 @@ Sentiment Analysis is based on TextBlob, which may not always be 100% accurate.
 ## Possible Improveents
 
 🔹 Improve Sentiment Accuracy (Use fine-tuned transformer models like BERT).
+
 🔹 Enhance Topic Extraction (Combine YAKE with LDA for better results).
+
 🔹 Support Multiple Languages (Allow users to choose output language for TTS).
+
 🔹 Include More Data Sources (Extend beyond NewsAPI using web scraping).
+
 🔹 Deploy on Hugging Face Spaces & GitHub Actions for Continuous Deployment.
 
 ## Setup & Installation
